@@ -1,0 +1,224 @@
+
+
+
+<div class="container carusel_container">
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+
+              <div class="carusel_inner_content">
+                  <div class="left_side">
+
+                      <h1 class="carusel_title">
+                          კომპიუტერები,
+                          ნოუთბუქები და სხვა
+                      </h1>
+
+                      <button class="carusel_btn">
+                          ყველას ნახვა
+                          <img class="btn_img" src="assets/Images/button_arrow.svg">
+                      </button>
+
+                  </div>
+                  <div class="right_side">
+
+                      <div class="img_box right">
+
+                          <img class="img1" src="assets/Images/laptop 1.svg" alt="...">
+
+                          <img class="img2" src="assets/Images/laptop 2.svg">
+                          <img class="img3" src="assets/Images/laptop 3.svg">
+
+                      </div>
+                  </div>
+
+              </div>
+
+
+
+          </div>
+          <div class="carousel-item">
+
+
+              <div class="carusel_inner_content">
+                  <div class="left_side">
+
+                      <h1 class="carusel_title">
+                          კომპიუტერები,
+                          ნოუთბუქები და სხვა
+                      </h1>
+
+                      <button class="carusel_btn">
+                          ყველას ნახვა
+                          <img class="btn_img" src="assets/Images/button_arrow.svg">
+                      </button>
+
+                  </div>
+                  <div class="right_side">
+
+                      <div class="img_box right">
+
+                          <img class="img1" src="assets/Images/laptop 1.svg" alt="...">
+
+                          <img class="img2" src="assets/Images/laptop 2.svg">
+                          <img class="img3" src="assets/Images/laptop 3.svg">
+
+                      </div>
+                  </div>
+
+              </div>
+
+
+          </div>
+          <div class="carousel-item">
+
+              <div class="carusel_inner_content">
+                  <div class="left_side">
+
+                      <h1 class="carusel_title">
+                          კომპიუტერები,
+                          ნოუთბუქები და სხვა
+                      </h1>
+
+                      <button class="carusel_btn">
+                          ყველას ნახვა
+                          <img class="btn_img" src="assets/Images/button_arrow.svg">
+                      </button>
+
+                  </div>
+                  <div class="right_side">
+
+                      <div class="img_box right">
+
+                          <img class="img1" src="assets/Images/laptop 1.svg" alt="...">
+
+                          <img class="img2" src="assets/Images/laptop 2.svg">
+                          <img class="img3" src="assets/Images/laptop 3.svg">
+
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+          <div class="carousel-item ">
+
+              <div class="carusel_inner_content">
+                  <div class="left_side">
+
+                      <h1 class="carusel_title">
+                          კომპიუტერები,
+                          ნოუთბუქები და სხვა
+                      </h1>
+
+                      <button class="carusel_btn">
+                          ყველას ნახვა
+                          <img class="btn_img" src="assets/Images/button_arrow.svg">
+                      </button>
+
+                  </div>
+                  <div class="right_side">
+
+                      <div class="img_box right">
+
+                          <img class="img1" src="assets/Images/laptop 1.svg" alt="...">
+
+                          <img class="img2" src="assets/Images/laptop 2.svg">
+                          <img class="img3" src="assets/Images/laptop 3.svg">
+
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+      </div>
+      <button class="carousel-control-prev carusel_control" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+
+          <div class="img_box left">
+
+              <img class="img" src="assets/Images/back.svg">
+
+          </div>
+
+
+      </button>
+      <button class="carousel-control-next carusel_control" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+
+          <div class="img_box right">
+
+              <img class="img" src="assets/Images/next.svg">
+
+          </div>
+
+      </button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 category p-0 " >
+      <ul *ngFor="let category of categories">
+        <li (click)="loadProductsByCategory(category.id)">
+          <p class="category_name">
+            {{ category.name }}
+          </p>
+
+          <img class="li_arrow" src="assets/Images/li arrow.svg">
+        </li>
+      </ul>
+
+    </div>
+    <div class="col product_box">
+      <div class="row row2 m-auto p-0">
+        <div class="col-2 p-0 product " *ngFor="let product of products" [routerLink]="['/products', product.id]">
+
+          <img class="product_img" src="{{product.images}}">
+          <h3 class="product_title">
+            {{ product.title }}
+          </h3>
+          <p class="product_price">
+            Price: ${{product.price}}
+          </p>
+
+       
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

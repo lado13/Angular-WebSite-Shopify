@@ -1,0 +1,48 @@
+<nav class="navContainer navbar navbar-expand-lg bg-body-tertiary">
+    <div class="innerContainer container-fluid ">
+        <a class="nav-link " aria-current="page" [routerLink]="['/main']">
+            <img  src="assets/Images/Logo.svg">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collPase_box collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="ul navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+
+
+                <div class="form">
+                    <input [(ngModel)]="searchText" (input)="filterProducts()"  class="searchInput form-control me-2"
+                        type="search" placeholder="Search" aria-label="Search">
+                    <img class="loop" src="assets/Images/loop.svg">
+
+                </div>
+
+            </ul>
+
+            <li [routerLink]="['/shopCart']" class="nav-item">
+                <img class="beg" src="assets/Images/Vector.svg">
+            </li>
+
+        </div>
+
+    </div>
+</nav>
+
+<div class="live_search_box" *ngIf="showDiv">
+
+    <ul>
+        <li *ngFor="let product of filteredProducts" [routerLink]="['/products', product.id]">
+            <img class="search_img" src="{{ product.images }}">
+            {{ product.title }}
+            $  {{ product.price }}
+
+        </li>
+    </ul>
+
+</div>
+
+
+

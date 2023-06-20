@@ -1,0 +1,28 @@
+<div class="container-fluid detail_container">
+    <div class="row" *ngIf="product">
+        <div class="col">
+            <img class="detail_img" src="{{product.images}}">
+
+        </div>
+        <div class="col">
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+
+
+            <div class="add_shoping_card_box">
+
+                <h3 class="detail_price">$ {{ product.price }}</h3>
+
+                <button class="add_button" (click)="addToCart(product)">
+                    კალათაში დამატება
+                </button>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

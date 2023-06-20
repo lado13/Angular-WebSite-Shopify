@@ -1,0 +1,91 @@
+<div class="container shopping_cart_container">
+    <div class="order_title">
+        <h1>
+            Your Order
+        </h1>
+    
+    </div>
+    <div class="cart_inner_box" *ngFor="let item of cartItems">
+        <div class="box1">
+            <img class="cart_image" src="{{item.images}}">
+            <h3 class="cart_title">
+                {{item.title}}
+            </h3>
+            
+
+        </div>
+        <div class="box2">
+            
+       
+            <img class="plus" (click)="decreaseQuantity(item)" src="assets/Images/-.svg">
+
+            <p class="counter">
+                {{ item.quantity }}
+            </p>
+          
+            <img class="minus" (click)="increaseQuantity(item)" src="assets/Images/+.svg">
+
+        </div>
+        <div class="box3">
+            <h3 class="cart_price">
+                {{item.price}} $
+            </h3>
+            <img class="cart_remove_btn" (click)="removeFromCart(item)" src="assets/Images/remove image.svg">
+
+            
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container cart_form_container">
+
+    <div class="form_title">
+        <h1>
+            Billing info
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nickolay Sitchev">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Mail:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nickolay.s@gmail.com">
+            </div>
+
+        </div>
+        <div class="col">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Phone number:</label>
+                <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="+955 555 555 555">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Adress:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tbilisi,Saburtalo, 24">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="order_box">
+        <button class="order_btn">
+            Order !
+        </button>
+    </div>
+
+</div>
