@@ -136,21 +136,21 @@
 
                     position: relative;
                     z-index: 9;
-                   
+
 
                 }
 
                 .img2 {
                     position: absolute;
                     left: 46px;
-                    
+
 
                 }
 
                 .img3 {
                     position: absolute;
                     left: 92px;
-                    
+
                 }
             }
         }
@@ -284,6 +284,44 @@
             .left {
                 margin: 0;
             }
+
+            .carusel_inner_content {
+                .left_side {
+                    padding: 0;
+
+                    .carusel_title {
+                        font-size: 28px;
+                        padding-top: 6px;
+                    }
+
+                    .carusel_btn {
+                        margin-top: 111px;
+                        width: 218px;
+                        height: 54px;
+                    }
+                }
+            }
+
+
+
+            .right_side {
+
+                .img_box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 200px;
+                    position: absolute;
+                    top: 106px;
+                    left: 13px;
+
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+
+
         }
     }
 
