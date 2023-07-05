@@ -191,7 +191,7 @@
   <div class="row">
     <div class="col-lg-3 category p-0 " >
       <ul *ngFor="let category of categories">
-        <li (click)="loadProductsByCategory(category.id)">
+        <li class="category_li" (click)="loadProductsByCategory(category.id)">
           <p class="category_name">
             {{ category.name }}
           </p>

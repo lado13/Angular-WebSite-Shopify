@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+body.dark-mode {
+    background-color: #212121;
+    color: #fff;
+    transition: all .2s linear;
+
+    .navContainer {
+        background-color: #383838;
+    }
+
+    .searchInput {
+        background-color: #a5a5a56b;
+        color: white;
+    }
+
+    .category_li {
+        background-color: #383838 !important;
+        color: #fff !important;
+    }
+
+    .product {
+        background-color: #383838 !important;
+
+    }
+
+    .cart_inner_box {
+        background-color: #383838 !important;
+
+
+    }
+
+    h1,
+    h3,
+    p {
+        color: white !important;
+    }
+
+    .shoping_cart_row {
+        background-color: #383838 !important;
+    }
+
+
+
+    .dark_mode_box {
+        width: 50px;
+        height: 16px;
+        border: 1px solid gray;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border: 2px solid yellow;
+
+
+
+        .mode_btn {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 3px solid rgb(55, 255, 55);
+            cursor: pointer;
+
+
+        }
+    }
+
+
+
+
+}
+
+
+.dark_mode_box {
+    width: 50px;
+    height: 16px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+
+
+
+    .mode_btn {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #121212;
+        cursor: pointer;
+
+    }
+}

@@ -3,7 +3,7 @@
         <h1>
             Your Order
         </h1>
-    
+
     </div>
     <div class="cart_inner_box" *ngFor="let item of cartItems">
         <div class="box1">
@@ -11,18 +11,18 @@
             <h3 class="cart_title">
                 {{item.title}}
             </h3>
-            
+
 
         </div>
         <div class="box2">
-            
-       
+
+
             <img class="plus" (click)="decreaseQuantity(item)" src="assets/Images/-.svg">
 
             <p class="counter">
                 {{ item.quantity }}
             </p>
-          
+
             <img class="minus" (click)="increaseQuantity(item)" src="assets/Images/+.svg">
 
         </div>
@@ -32,7 +32,7 @@
             </h3>
             <img class="cart_remove_btn" (click)="removeFromCart(item)" src="assets/Images/remove image.svg">
 
-            
+
         </div>
     </div>
 
@@ -54,7 +54,7 @@
         </h1>
     </div>
 
-    <div class="row">
+    <div class="row shoping_cart_row">
         <div class="col">
 
             <div class="mb-3">
@@ -63,7 +63,8 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Mail:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nickolay.s@gmail.com">
+                <input type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Nickolay.s@gmail.com">
             </div>
 
         </div>
@@ -75,7 +76,8 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Adress:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tbilisi,Saburtalo, 24">
+                <input type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Tbilisi,Saburtalo, 24">
             </div>
 
         </div>

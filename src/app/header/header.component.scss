@@ -3,6 +3,8 @@
     box-shadow: 0px 2px 6px 2px rgba(184, 184, 184, 0.25);
     padding: 12px 0;
 
+
+
     .innerContainer {
         max-width: 1440px;
         padding: 0 22px;
@@ -45,7 +47,7 @@
 }
 
 
-.live_search_box{
+.live_search_box {
     position: absolute;
     top: 43%;
     left: 49%;
@@ -54,11 +56,12 @@
     width: 374px;
     max-height: 500px;
     z-index: 100000000000000000;
-    
 
-    ul{
+
+    ul {
         padding: 0;
-        li{
+
+        li {
             list-style-type: none;
             margin-bottom: 10px;
             cursor: pointer;
@@ -66,31 +69,30 @@
             padding: 10px;
             background-color: #FB6F20;
             color: #F6F6F6;
-            .search_img{
+
+            .search_img {
                 width: 70px;
                 height: 50px;
             }
         }
     }
-   
-   
+
+
 }
-
-
 
 
 
 
 @media(max-width:600px) {
 
-    .navContainer{
+    .navContainer {
 
-        .innerContainer{
-            .collPase_box{
-                .ul{
-                    .form{
-                     
-                        .searchInput{
+        .innerContainer {
+            .collPase_box {
+                .ul {
+                    .form {
+
+                        .searchInput {
                             padding-top: 15px;
                             width: 349px;
                         }

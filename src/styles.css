@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files *//*# sourceMappingURL=styles.css.map */
+body.dark-mode {
+  background-color: #212121;
+  color: #fff;
+  transition: all 0.2s linear;
+}
+body.dark-mode .navContainer {
+  background-color: #383838;
+}
+body.dark-mode .searchInput {
+  background-color: rgba(165, 165, 165, 0.4196078431);
+  color: white;
+}
+body.dark-mode .category_li {
+  background-color: #383838 !important;
+  color: #fff !important;
+}
+body.dark-mode .product {
+  background-color: #383838 !important;
+}
+body.dark-mode .cart_inner_box {
+  background-color: #383838 !important;
+}
+body.dark-mode h1,
+body.dark-mode h3,
+body.dark-mode p {
+  color: white !important;
+}
+body.dark-mode .shoping_cart_row {
+  background-color: #383838 !important;
+}
+body.dark-mode .dark_mode_box {
+  width: 50px;
+  height: 16px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid yellow;
+}
+body.dark-mode .dark_mode_box .mode_btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 3px solid rgb(55, 255, 55);
+  cursor: pointer;
+}
+
+.dark_mode_box {
+  width: 50px;
+  height: 16px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+.dark_mode_box .mode_btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #121212;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

@@ -183,4 +183,32 @@
   .carusel_container .slide .left {
     margin: 0;
   }
+  .carusel_container .slide .carusel_inner_content .left_side {
+    padding: 0;
+  }
+  .carusel_container .slide .carusel_inner_content .left_side .carusel_title {
+    font-size: 28px;
+    padding-top: 6px;
+  }
+  .carusel_container .slide .carusel_inner_content .left_side .carusel_btn {
+    margin-top: 111px;
+    width: 218px;
+    height: 54px;
+  }
+  .carusel_container .slide .indicators {
+    position: static;
+    margin-top: 10px;
+  }
+  .carusel_container .slide .right_side .img_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    position: absolute;
+    top: 106px;
+    left: 13px;
+  }
+  .carusel_container .slide .right_side .img_box img {
+    width: 200px;
+  }
 }/*# sourceMappingURL=main.component.css.map */

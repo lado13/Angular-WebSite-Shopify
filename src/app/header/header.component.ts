@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { HostListener } from '@angular/core';
+import { DarkModeService } from '../dark-mode.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,14 @@ export class HeaderComponent {
   searchText = '';
 
 
-  constructor(private apiService: ServiceService) { }
+
+  constructor(private apiService: ServiceService, private darkModeService: DarkModeService) { }
+
+  toggleDarkMode(): void {
+    this.darkModeService.toggleDarkMode();
+  }
+
+
 
   ngOnInit(): void {
 

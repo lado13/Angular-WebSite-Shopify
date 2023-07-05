@@ -1,4 +1,5 @@
 <nav class="navContainer navbar navbar-expand-lg bg-body-tertiary">
+    
     <div class="innerContainer container-fluid ">
         <a class="nav-link " aria-current="page" [routerLink]="['/main']">
             <img  src="assets/Images/Logo.svg">
@@ -26,9 +27,18 @@
                 <img class="beg" src="assets/Images/Vector.svg">
             </li>
 
+
         </div>
 
     </div>
+
+    <div class="dark_mode_box">
+        <div class="mode_btn" (click)="toggleDarkMode()">
+
+        </div>
+    </div>
+
+
 </nav>
 
 <div class="live_search_box" *ngIf="showDiv">
