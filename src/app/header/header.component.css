@@ -24,8 +24,24 @@
   right: 18px;
   top: 9px;
 }
-.navContainer .innerContainer .collPase_box .beg {
+.navContainer .innerContainer .collPase_box .beg_box {
+  position: relative;
+}
+.navContainer .innerContainer .collPase_box .beg_box .beg {
   cursor: pointer;
+}
+.navContainer .innerContainer .collPase_box .beg_box .total_quantity {
+  position: absolute;
+  top: -7px;
+  left: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FB6F20;
+  color: #F6F6F6;
 }
 
 .live_search_box {

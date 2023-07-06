@@ -108,6 +108,13 @@ export class CartService {
     
   }
 
+  getTotalQuantity(): number {
+    return this.products.length;
+  }
+
+  
+
+
 
 
 }

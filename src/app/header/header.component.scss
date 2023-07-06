@@ -37,9 +37,36 @@
                 }
             }
 
-            .beg {
-                cursor: pointer;
+
+            .beg_box {
+                position: relative;
+
+                .beg {
+                    cursor: pointer;
+
+                }
+
+                .total_quantity {
+                    position: absolute;
+                    top: -7px;
+                    left: 22px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #FB6F20;
+                    color: #F6F6F6;
+
+                }
+
+
+
             }
+
+
+
         }
 
 

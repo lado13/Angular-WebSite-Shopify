@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { HostListener } from '@angular/core';
 import { DarkModeService } from '../dark-mode.service';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-header',
@@ -12,10 +13,14 @@ export class HeaderComponent {
 
   filteredProducts: any[] = [];
   searchText = '';
+  totalQuantity: number = 0;
 
 
 
-  constructor(private apiService: ServiceService, private darkModeService: DarkModeService) { }
+  constructor(private apiService: ServiceService, private darkModeService: DarkModeService,
+    private cart: CartService
+    
+    ) { }
 
   toggleDarkMode(): void {
     this.darkModeService.toggleDarkMode();
@@ -24,6 +29,7 @@ export class HeaderComponent {
 
 
   ngOnInit(): void {
+    this.totalQuantity = this.cart.getTotalQuantity();
 
   }
 
