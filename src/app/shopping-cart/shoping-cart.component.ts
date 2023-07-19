@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { CartService } from '../cart.service';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-shoping-cart',
@@ -12,7 +12,7 @@ export class ShopingCartComponent {
   cartItems: any[] = [];
   totalQuantity: number = 0;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private fB: FormBuilder) { }
 
   ngOnInit(): void {
 
@@ -20,6 +20,36 @@ export class ShopingCartComponent {
     this.updateTotalQuantity();
 
   }
+
+  isSubmitted = false;
+  registerForm = this.fB.group({
+    userName: ['', Validators.required],
+    userEmail: ['', [Validators.required, Validators.email]],
+    userPhone: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(13)]],
+    userAddress: ['', Validators.required],
+
+
+
+  })
+
+  onSubmit(): void {
+    this.isSubmitted = true;
+    console.log("Submitted form", this.registerForm.value, this.registerForm.invalid);
+    this.registerForm = this.fB.group({
+      userName: '',
+      userEmail: '',
+      userPhone: '',
+      userAddress: ''
+    })
+
+  }
+
+
+
+
+
+
+
 
   removeFromCart(product: any): void {
 

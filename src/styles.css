@@ -31,26 +31,27 @@ body.dark-mode .shoping_cart_row {
 body.dark-mode .dark_mode_box {
   width: 50px;
   height: 16px;
-  border: 1px solid gray;
+  background-color: #999999;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border: 2px solid yellow;
 }
 body.dark-mode .dark_mode_box .mode_btn {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: #ffffff;
-  border: 3px solid rgb(55, 255, 55);
   cursor: pointer;
+}
+body.dark-mode .dark_mode_box .mode_btn:hover {
+  background-color: #07cf18;
 }
 
 .dark_mode_box {
   width: 50px;
   height: 16px;
-  border: 1px solid gray;
+  background-color: #d8d8d8;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -59,6 +60,9 @@ body.dark-mode .dark_mode_box .mode_btn {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #121212;
+  background-color: #747474;
   cursor: pointer;
+}
+.dark_mode_box .mode_btn:hover {
+  background-color: #07cf18;
 }/*# sourceMappingURL=styles.css.map */

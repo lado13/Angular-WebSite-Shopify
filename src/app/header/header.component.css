@@ -70,6 +70,9 @@
   width: 70px;
   height: 50px;
 }
+.live_search_box ul li:hover {
+  background-color: #07cf18;
+}
 
 @media (max-width: 600px) {
   .navContainer .innerContainer .collPase_box .ul .form .searchInput {

@@ -119,6 +119,10 @@
                     margin-left: 10px;
                 }
             }
+
+            .carusel_btn:hover {
+                background-color: #07cf18;
+            }
         }
 
         .right_side {
@@ -213,6 +217,10 @@
                     margin: 0;
                 }
             }
+
+            .category_li:hover {
+                background-color: #07cf18 !important;
+            }
         }
     }
 
@@ -302,7 +310,7 @@
                 }
             }
 
-            .indicators{
+            .indicators {
                 position: static;
                 margin-top: 10px;
             }

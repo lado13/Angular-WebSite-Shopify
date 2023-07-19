@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailComponent } from './detail/detail.component';
 import { ShopingCartComponent } from './shopping-cart/shoping-cart.component';
 
@@ -28,6 +28,7 @@ import { ShopingCartComponent } from './shopping-cart/shoping-cart.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
    
   ],
   providers: [],

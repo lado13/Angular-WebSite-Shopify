@@ -54,40 +54,79 @@
         </h1>
     </div>
 
-    <div class="row shoping_cart_row">
-        <div class="col">
 
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nickolay Sitchev">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Mail:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1"
-                    placeholder="Nickolay.s@gmail.com">
-            </div>
+    <form action="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="row shoping_cart_row">
+            <div class="col">
 
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name:</label>
+                    <input type="text" class="form-control" formControlName="userName"
+                        [class.invalid]="registerForm.get('userName')?.invalid && registerForm.get('userName')?.dirty || registerForm.get('userName')?.touched || isSubmitted"
+                        id="exampleFormControlInput1" placeholder="Nickolay Sitchev">
+
+                    <span class="error"
+                        *ngIf="registerForm.get('userName')?.hasError('required') && registerForm.get('userName')?.dirty || registerForm.get('userName')?.touched || isSubmitted">
+
+                        Name is required
+                    </span>
+
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Mail:</label>
+                    <input type="email" class="form-control" formControlName="userEmail"
+                        [class.invalid]="registerForm.get('userEmail')?.invalid && registerForm.get('userEmail')?.dirty || registerForm.get('userEmail')?.touched || isSubmitted"
+                        id="exampleFormControlInput1" placeholder="Nickolay.s@gmail.com">
+
+                    <span class="error"
+                        *ngIf="registerForm.get('userEmail')?.hasError('required') && registerForm.get('userEmail')?.dirty || registerForm.get('userEmail')?.touched || isSubmitted">
+
+                        Email is required
+                    </span>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Phone number:</label>
+
+                    <input type="tel" class="form-control" formControlName="userPhone"
+                        [class.invalid]="registerForm.get('userPhone')?.invalid && registerForm.get('userPhone')?.dirty || registerForm.get('userPhone')?.touched || isSubmitted"
+                        id="exampleFormControlInput1" placeholder="+955 555 555 555">
+
+                    <span class="error"
+                        *ngIf="registerForm.get('userPhone')?.hasError('required') && registerForm.get('userPhone')?.dirty || registerForm.get('userPhone')?.touched || isSubmitted">
+
+                        Phone number is required
+                    </span>
+                </div>
+                <div class="mb-3">
+
+                    <label for="exampleFormControlInput1" class="form-label">Adress:</label>
+
+                    <input type="text" class="form-control" formControlName="userAddress"
+                        [class.invalid]="registerForm.get('userAddress')?.invalid && registerForm.get('userAddress')?.dirty || registerForm.get('userAddress')?.touched || isSubmitted"
+                        id="exampleFormControlInput1" placeholder="Tbilisi,Saburtalo, 24">
+
+                    <span class="error"
+                        *ngIf="registerForm.get('userAddress')?.hasError('required') && registerForm.get('userAddress')?.dirty || registerForm.get('userAddress')?.touched || isSubmitted">
+
+                        Address is required
+                    </span>
+                </div>
+
+            </div>
         </div>
-        <div class="col">
 
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Phone number:</label>
-                <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="+955 555 555 555">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Adress:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1"
-                    placeholder="Tbilisi,Saburtalo, 24">
-            </div>
 
+        <div class="order_box">
+            <button type="submit" class="order_btn" [disabled]="registerForm.invalid">
+                Order !
+            </button>
         </div>
-    </div>
 
 
-    <div class="order_box">
-        <button class="order_btn">
-            Order !
-        </button>
-    </div>
+    </form>
 
 </div>

@@ -108,6 +108,15 @@
   align-items: center;
   color: #121212;
 }
+.cart_form_container .row .col .invalid {
+  border: 2px solid red;
+}
+.cart_form_container .row .col .ng-valid {
+  border: 2px solid rgb(253, 253, 253) !important;
+}
+.cart_form_container .row .col .error {
+  color: red;
+}
 .cart_form_container .row .col label {
   font-style: normal;
   font-weight: 400;
@@ -139,6 +148,10 @@
   background-color: #FB6F20;
   border-radius: 8px;
   border: none;
+}
+.cart_form_container .order_box .order_btn:hover {
+  background-color: #07cf18;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 800px) {

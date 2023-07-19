@@ -143,6 +143,20 @@
                 color: #121212;
             }
 
+            .invalid {
+                border: 2px solid red;
+
+            }
+
+            .ng-valid {
+                border: 2px solid rgb(253, 253, 253) !important;
+            }
+
+            .error {
+                color: red;
+            }
+
+
             label {
                 font-style: normal;
                 font-weight: 400;
@@ -183,6 +197,14 @@
 
         }
 
+        .order_btn:hover {
+            background-color: #07cf18;
+            transition: all .3s ease-in-out;
+        }
+
+
+
+
 
 
     }
@@ -202,7 +224,7 @@
 
             .box2 {
                 width: 49%;
-                
+
             }
 
             .box3 {

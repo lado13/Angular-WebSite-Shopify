@@ -85,6 +85,9 @@
 .carusel_container .carusel_inner_content .left_side .carusel_btn .btn_img {
   margin-left: 10px;
 }
+.carusel_container .carusel_inner_content .left_side .carusel_btn:hover {
+  background-color: #07cf18;
+}
 .carusel_container .carusel_inner_content .right_side {
   width: 75%;
 }
@@ -137,6 +140,9 @@
 }
 .container .category ul li .category_name {
   margin: 0;
+}
+.container .category ul .category_li:hover {
+  background-color: #07cf18 !important;
 }
 .container .product_box .row2 {
   padding-right: 11px;
