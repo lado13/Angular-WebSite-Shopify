@@ -23,7 +23,7 @@ export class CartService {
     } else {
 
       product.quantity = 1;
-      this.products.push(product);
+      this.products.unshift(product);
 
     }
 
@@ -105,14 +105,14 @@ export class CartService {
   getCartTotal(): number {
 
     return this.products.reduce((total, product) => total + product.price * product.quantity, 0);
-    
+
   }
 
   getTotalQuantity(): number {
     return this.products.length;
   }
 
-  
+
 
 
 

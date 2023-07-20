@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CartService } from '../cart.service';
+import { CartService } from '../serviceFolder/cart.service';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -34,13 +34,9 @@ export class ShopingCartComponent {
 
   onSubmit(): void {
     this.isSubmitted = true;
-    console.log("Submitted form", this.registerForm.value, this.registerForm.invalid);
-    this.registerForm = this.fB.group({
-      userName: '',
-      userEmail: '',
-      userPhone: '',
-      userAddress: ''
-    })
+    console.log("Submitted form", this.registerForm.value, this.registerForm.invalid, this.cartItems);
+
+    
 
   }
 

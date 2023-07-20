@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { ServiceService } from '../service.service';
+import { ServiceService } from '../serviceFolder/service.service';
 import { HostListener } from '@angular/core';
-import { DarkModeService } from '../dark-mode.service';
-import { CartService } from '../cart.service';
+import { DarkModeService } from '../serviceFolder/dark-mode.service';
+import { CartService } from '../serviceFolder/cart.service';
 
 @Component({
   selector: 'app-header',
