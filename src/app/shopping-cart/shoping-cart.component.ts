@@ -34,6 +34,7 @@ export class ShopingCartComponent {
 
   onSubmit(): void {
     this.isSubmitted = true;
+    alert('Successfully sended :)');
     console.log("Submitted form", this.registerForm.value, this.registerForm.invalid, this.cartItems);
 
     

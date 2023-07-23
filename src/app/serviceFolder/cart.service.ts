@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class CartService {
   private storageKey = 'shoppingCart';
   products: any[] = [];
+  messageExist: string = '';
 
 
   constructor(private http: HttpClient) {
@@ -15,10 +16,14 @@ export class CartService {
 
   addToCart(product: any): void {
 
+
     const existingProduct = this.products.find(p => p.id === product.id);
     if (existingProduct) {
 
       existingProduct.quantity++;
+      this.messageExist = "უკვე კალათშია!"
+
+
 
     } else {
 

@@ -12,6 +12,8 @@ export class DetailComponent implements OnInit {
 
   productId: string = '';
   product: any;
+  messageEx: string = 'კალათში დამატება';
+ 
 
   constructor(private route: ActivatedRoute, private productService: ServiceService, private cartService: CartService) { }
 
@@ -48,7 +50,14 @@ export class DetailComponent implements OnInit {
 
   addToCart(product: any): void {
 
+
     this.cartService.addToCart(product);
+    this.messageEx = this.cartService.messageExist;
+    console.log(this.messageEx = this.cartService.messageExist);
+
+
+
+
 
   }
 
